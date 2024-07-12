@@ -1,22 +1,10 @@
-// design principle -> princípio de projeto
-// explícito é melhor que implícito
-// principle of least privilege (do menor privilégio)
+class Cor {
 
-final class Cor { // ela não pode ser estendida
-
-  // atributos, conjunto de atributos forma o estado
-  // é encapsulado (estado protegido)
-
-  // tornar imutável, todos os atributos são final
   private final int red;
   private final int green;
   private final int blue;
 
-  // construtor polimórfico
-  // polimorfismo ah-hoc (por sobrecarga)
-
-  // construtor sobrecarregado, sobrecarga, overload
-  Cor() { // construtor vazio (sem parâmetros)
+  Cor() {
     this.red = 0;
     this.green = 0;
     this.blue = 0;
