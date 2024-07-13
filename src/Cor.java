@@ -1,4 +1,4 @@
-class Cor {
+final class Cor {
 
   private final int red;
   private final int green;
@@ -52,20 +52,26 @@ class Cor {
   // mutadores (mutators)
   // setters
   Cor setGreen(int green) {
-    return new Cor(this.red, green, this.blue);
+    return new Cor(red, green, blue);
   }
 
   Cor setBlue(int blue) {
-    return new Cor(this.red, this.green, blue);
+    return new Cor(red, green, blue);
   }
-
+  
   Cor setRed(int red) {
-    return new Cor(red, this.green, this.blue);
+    return new Cor(red, green, blue);
   }
 
   Cor esverdear() { // imutável
     // this.green++;
     return 
       new Cor(this.red, this.green + 1, this.blue);
+  }
+
+
+  @Override // devolve a Cor no formato String
+  public String toString() {
+    return "RGB(%d, %d, %d)".formatted(red, green, blue);
   }
 }
